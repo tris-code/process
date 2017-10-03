@@ -157,6 +157,12 @@ public class Process {
                 posix_spawn_file_actions_t()
         #endif
 
+        func ensureZeroExit(_ code: Int32) throws {
+            if code != 0 {
+                throw SystemError()
+            }
+        }
+
         try ensureZeroExit(posix_spawn_file_actions_init(&fileActions))
         defer { posix_spawn_file_actions_destroy(&fileActions) }
 
@@ -279,12 +285,6 @@ extension Process {
             }
             async.sleep(until: Date(timeIntervalSinceNow: 0.05))
         }
-    }
-}
-
-private func ensureZeroExit(_ code: Int32) throws {
-    if code != 0 {
-        throw SystemError()
     }
 }
 
