@@ -14,14 +14,14 @@ public enum CommunicationChannel {
     case pipe(Pipe)
     case fileHandle(FileHandle)
 
-    func readAllText() -> String {
+    public func readAllText() -> String {
         switch self {
         case .pipe(let pipe): return pipe.readAllText()
         case .fileHandle(let handle): return handle.readAllText()
         }
     }
 
-    var availableData: Data {
+    public var availableData: Data {
         switch self {
         case .pipe(let pipe): return pipe.availableData
         case .fileHandle(let handle): return handle.availableData
