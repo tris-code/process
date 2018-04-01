@@ -67,12 +67,4 @@ class ProcessTests: TestCase {
             assertEqual(error as? ProcessError, .timeout)
         }
     }
-
-
-    static var allTests = [
-        ("testByName", testByName),
-        ("testByPath", testByPath),
-        ("testStatus", testStatus),
-        ("testExitTimeout", testExitTimeout),
-    ]
 }
