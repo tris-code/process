@@ -21,6 +21,9 @@ let package = Package(
             url: "https://github.com/tris-foundation/platform.git",
             .branch("master")),
         .package(
+            url: "https://github.com/tris-foundation/time.git",
+            .branch("master")),
+        .package(
             url: "https://github.com/tris-foundation/async.git",
             .branch("master")),
         .package(
@@ -30,7 +33,7 @@ let package = Package(
     targets: [
         .target(
             name: "Process",
-            dependencies: ["Platform", "Async"]),
+            dependencies: ["Platform", "Time", "Async"]),
         .testTarget(
             name: "ProcessTests",
             dependencies: ["Process", "Test", "AsyncDispatch"])

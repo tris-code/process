@@ -8,6 +8,7 @@
  * See CONTRIBUTORS.txt for the list of the project authors
  */
 
+import Time
 import Async
 import Platform
 import Foundation
@@ -278,12 +279,12 @@ extension Process {
         return true
     }
 
-    public func waitUntilExit(deadline: Date = Date.distantFuture) throws {
+    public func waitUntilExit(deadline: Time = .distantFuture) throws {
         while updateStatus() == false {
-            if Date() > deadline {
+            if deadline < .now {
                 throw ProcessError.timeout
             }
-            async.sleep(until: Date(timeIntervalSinceNow: 0.05))
+            async.sleep(until: .now + 50.ms)
         }
     }
 }
