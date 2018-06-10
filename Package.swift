@@ -28,18 +28,21 @@ let package = Package(
             url: "https://github.com/tris-foundation/async.git",
             .branch("master")),
         .package(
-            url: "https://github.com/tris-foundation/test.git",
+            url: "https://github.com/tris-foundation/fiber.git",
             .branch("master")),
         .package(
-            url: "https://github.com/tris-foundation/fiber.git",
+            url: "https://github.com/tris-foundation/aio.git",
+            .branch("master")),
+        .package(
+            url: "https://github.com/tris-foundation/test.git",
             .branch("master"))
     ],
     targets: [
         .target(
             name: "Process",
-            dependencies: ["Platform", "Time", "Async"]),
+            dependencies: ["Platform", "Time", "Async", "AIO"]),
         .testTarget(
             name: "ProcessTests",
-            dependencies: ["Process", "Test", "Fiber"])
+            dependencies: ["Process", "Test", "Fiber", "AIO"])
     ]
 )

@@ -5,6 +5,7 @@ extension ProcessTests {
         ("testByName", testByName),
         ("testByPath", testByPath),
         ("testExitTimeout", testExitTimeout),
+        ("testFileChannel", testFileChannel),
         ("testStatus", testStatus),
     ]
 }
