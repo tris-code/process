@@ -8,22 +8,22 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/tris-foundation/platform.git",
+            url: "https://github.com/tris-code/platform.git",
             .branch("master")),
         .package(
-            url: "https://github.com/tris-foundation/time.git",
+            url: "https://github.com/tris-code/time.git",
             .branch("master")),
         .package(
-            url: "https://github.com/tris-foundation/async.git",
+            url: "https://github.com/tris-code/async.git",
             .branch("master")),
         .package(
-            url: "https://github.com/tris-foundation/fiber.git",
+            url: "https://github.com/tris-code/fiber.git",
             .branch("master")),
         .package(
-            url: "https://github.com/tris-foundation/aio.git",
+            url: "https://github.com/tris-code/aio.git",
             .branch("master")),
         .package(
-            url: "https://github.com/tris-foundation/test.git",
+            url: "https://github.com/tris-code/test.git",
             .branch("master"))
     ],
     targets: [
