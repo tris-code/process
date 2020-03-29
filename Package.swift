@@ -7,12 +7,12 @@ let package = Package(
         .library(name: "Process", targets: ["Process"]),
     ],
     dependencies: [
-        .package(path: "../Platform"),
-        .package(path: "../Time"),
-        .package(path: "../Async"),
-        .package(path: "../Fiber"),
-        .package(path: "../AIO"),
-        .package(path: "../Test")
+        .package(path: "../platform"),
+        .package(path: "../time"),
+        .package(path: "../async"),
+        .package(path: "../fiber"),
+        .package(path: "../aio"),
+        .package(path: "../test")
     ],
     targets: [
         .target(
